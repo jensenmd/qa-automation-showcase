@@ -1,0 +1,67 @@
+name: QA Automation Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run nightly at 6am UTC to catch API changes
+    - cron: '0 6 * * *'
+
+jobs:
+  api-tests:
+    name: pytest API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pytest pytest-html requests pandas
+
+      - name: Run API test suite
+        run: |
+          pytest tests/ \
+            --html=reports/pytest_report.html \
+            --self-contained-html \
+            -v
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pytest-report
+          path: reports/pytest_report.html
+
+  data-validation:
+    name: Great Expectations Data Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pandas
+
+      - name: Run data validation
+        run: python data/validate_brewery_data.py
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ge-validation-report
+          path: reports/ge_validation_results.json
