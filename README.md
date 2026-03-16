@@ -2,7 +2,7 @@
 
 A multi-layer API testing and data validation framework demonstrating real-world QA engineering practices. Built around the [OpenBreweryDB](https://www.openbrewerydb.org/) public REST API.
 
-![CI Status](https://github.com/YOUR_USERNAME/qa-showcase/actions/workflows/qa-suite.yml/badge.svg)
+![CI Status](https://github.com/jensenmd/qa-showcase/actions/workflows/qa-suite.yml/badge.svg)
 
 ---
 
@@ -105,7 +105,7 @@ Fetches 200 brewery records and validates:
 
 ### Setup
 ```bash
-git clone https://github.com/YOUR_USERNAME/qa-showcase.git
+git clone https://github.com/jensenmd/qa-showcase.git
 cd qa-showcase
 pip install -r requirements.txt
 ```
@@ -153,4 +153,4 @@ Test reports are uploaded as workflow artifacts after each run.
 ## Author
 
 **Michael D. Jensen** — Senior QA Engineer  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) | jensen.md@gmail.com
+[LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/michael-jensen-751b59294/) | jensen.md@gmail.com
