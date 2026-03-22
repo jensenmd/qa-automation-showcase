@@ -2,7 +2,11 @@
 
 A multi-layer API testing and data validation framework demonstrating real-world QA engineering practices. Built around the [OpenBreweryDB](https://www.openbrewerydb.org/) public REST API.
 
-![CI Status](https://github.com/jensenmd/qa-showcase/actions/workflows/qa-suite.yml/badge.svg)
+![CI Status](https://github.com/jensenmd/qa-automation-showcase/actions/workflows/qa-suite.yml/badge.svg)
+
+Built by **Michael D. Jensen** — Senior QA Engineer with 15+ years of enterprise testing experience, currently re-entering the field with a focus on API testing, automation, and CI/CD-integrated quality practices.
+
+🔗 [LinkedIn](https://www.linkedin.com/in/michael-jensen-751b59294/) | 📧 jensen.md@gmail.com
 
 ---
 
@@ -15,12 +19,14 @@ A multi-layer API testing and data validation framework demonstrating real-world
 | API Collections | Postman + JavaScript | Request chaining, schema assertions, enum validation, error handling |
 | CI/CD Pipeline | GitHub Actions | Automated test execution on push, pull request, and nightly schedule |
 
+This project was built to demonstrate current, working automation skills — not just claim them. The three layers (pytest, pandas, Postman) reflect the testing disciplines used in real enterprise QA work: validating API behavior, verifying data integrity, and ensuring coverage runs automatically without manual intervention.
+
 ---
 
 ## Project Structure
 
 ```
-qa-showcase/
+qa-automation-showcase/
 ├── tests/
 │   ├── conftest.py               # Shared fixtures and session setup
 │   └── test_api.py               # Full pytest API test suite
@@ -86,6 +92,8 @@ Fetches 200 brewery records and validates:
 - Record volume is within expected bounds
 - No empty brewery names
 
+The pandas validation layer mirrors the SQL-based data integrity work done in enterprise QA — systematically checking field presence, type correctness, value constraints, and volume against known expectations rather than just eyeballing output.
+
 ### Postman Collection (`postman/openbrewerydb_collection.json`)
 
 7 requests demonstrating:
@@ -97,6 +105,27 @@ Fetches 200 brewery records and validates:
 
 ---
 
+## Why OpenBreweryDB?
+
+- Free, public REST API — no authentication required
+- Real, meaningful data with defined business rules (brewery types, locations)
+- Supports filtering, searching, pagination, and random endpoints
+- Stable enough for regression testing, interesting enough to write meaningful assertions
+- Nightly CI run catches upstream API changes automatically — a real-world concern when your tests depend on an external service
+
+---
+
+## CI/CD Pipeline
+
+GitHub Actions runs automatically on:
+- Every push to `main`
+- Every pull request targeting `main`
+- Nightly at 6:00 AM UTC (to catch upstream API changes)
+
+Test reports are uploaded as workflow artifacts after each run.
+
+---
+
 ## Running Locally
 
 ### Prerequisites
@@ -105,8 +134,8 @@ Fetches 200 brewery records and validates:
 
 ### Setup
 ```bash
-git clone https://github.com/jensenmd/qa-showcase.git
-cd qa-showcase
+git clone https://github.com/jensenmd/qa-automation-showcase.git
+cd qa-automation-showcase
 pip install -r requirements.txt
 ```
 
@@ -130,27 +159,25 @@ Import `postman/openbrewerydb_collection.json` into Postman and run the collecti
 
 ---
 
-## CI/CD
+## Relationship to Other Portfolio Projects
 
-GitHub Actions runs automatically on:
-- Every push to `main`
-- Every pull request targeting `main`
-- Nightly at 6:00 AM UTC (to catch upstream API changes)
+This project is part of a three-project QA portfolio demonstrating complementary skills:
 
-Test reports are uploaded as workflow artifacts after each run.
+| Project | Focus | Stack |
+|---|---|---|
+| [pharmacy-spend-etl-qa](https://github.com/jensenmd/pharmacy-spend-etl-qa) | ETL pipeline validation, SQL-driven data integrity testing | Python / pytest / SQLite / pandas |
+| **qa-automation-showcase** (this repo) | REST API testing, data validation, CI/CD integration | Python / pytest / Postman / GitHub Actions |
+| [restful-booker-qa](https://github.com/jensenmd/restful-booker-qa) | Full-stack layered testing — API + UI automation | Postman / Newman / Playwright / GitHub Actions |
 
----
-
-## Why OpenBreweryDB?
-
-- Free, public REST API — no authentication required
-- Real, meaningful data with defined business rules (brewery types, locations)
-- Supports filtering, searching, pagination, and random endpoints
-- Stable enough for regression testing, interesting enough to write meaningful assertions
+Together they demonstrate backend data validation, API testing, and UI automation — the core layers of a modern QA engineering practice.
 
 ---
 
 ## Author
 
-**Michael D. Jensen** — Senior QA Engineer  
-[LinkedIn](https://linkedin.com/in/https://www.linkedin.com/in/michael-jensen-751b59294/) | jensen.md@gmail.com
+**Michael D. Jensen** — Senior QA Engineer
+15+ years of enterprise software testing experience across healthcare IT, financial systems, telecommunications, and cybersecurity. Deep background in REST API validation, ETL pipeline testing, SQL-based data integrity verification, and full-stack manual testing in Agile environments.
+
+Currently re-entering the field with active focus on Python/pytest automation, Playwright UI testing, and CI/CD-integrated quality practices.
+
+🔗 [LinkedIn](https://www.linkedin.com/in/michael-jensen-751b59294/) | 🐙 [GitHub Profile](https://github.com/jensenmd) | 📧 jensen.md@gmail.com
