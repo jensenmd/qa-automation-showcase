@@ -8,6 +8,8 @@ Built by **Michael D. Jensen** — Senior QA Engineer with 15+ years of enterpri
 
 🔗 [LinkedIn](https://www.linkedin.com/in/michael-jensen-751b59294/) | 📧 jensen.md@gmail.com
 
+![qa-automation-showcase](assets/preview.png)
+
 ---
 
 ## What This Project Demonstrates
