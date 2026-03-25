@@ -7,7 +7,8 @@ A multi-layer API testing and data validation framework demonstrating real-world
 Built by **Michael D. Jensen** — Senior QA Engineer with 15+ years of enterprise testing experience, currently re-entering the field with a focus on API testing, automation, and CI/CD-integrated quality practices.
 
 🔗 [LinkedIn](https://www.linkedin.com/in/michael-jensen-751b59294/) | 📧 jensen.md@gmail.com
-![qa-automation-showcase — Multi-layer API Testing + Data Validation Framework](assets/preview.png)
+
+![qa-automation-showcase](assets/preview.png)
 ---
 
 ![qa-automation-showcase — Multi-layer API Testing + Data Validation Framework](assets/preview.png)
