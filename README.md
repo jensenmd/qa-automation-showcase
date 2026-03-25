@@ -2,7 +2,7 @@
 
 A multi-layer API testing and data validation framework demonstrating real-world QA engineering practices. Built around the [OpenBreweryDB](https://www.openbrewerydb.org/) public REST API.
 
-![qa-automation-showcase](preview.png)
+![qa-automation-showcase](qa-automation-showcase-preview%20(1).png)
 
 ![CI Status](https://github.com/jensenmd/qa-automation-showcase/actions/workflows/qa-suite.yml/badge.svg)
 
