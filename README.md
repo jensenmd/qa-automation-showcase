@@ -4,7 +4,7 @@ A multi-layer API testing and data validation framework demonstrating real-world
 
 ![CI Status](https://github.com/jensenmd/qa-automation-showcase/actions/workflows/qa-suite.yml/badge.svg)
 
-![qa-automation-showcase](qa-automation-showcase-preview%20(1).png)
+![qa-automation-showcase](qa-automation-showcase-previewv2.png)
 
 Built by **Michael D. Jensen** — Senior QA Engineer with 15+ years of enterprise testing experience, currently re-entering the field with a focus on API testing, automation, and CI/CD-integrated quality practices.
 
